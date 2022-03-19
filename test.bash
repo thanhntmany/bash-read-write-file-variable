@@ -30,5 +30,5 @@ echo -e "-- \n"
 
 echo current- $asda
 . ./axx.sh
-echo -e "\after reload:"
+echo -e "after reload:"
 echo current- $asda
