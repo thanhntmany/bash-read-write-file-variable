@@ -2,22 +2,25 @@
 
 write_variables_to_file()
 {
-    local f=$1
+    local _file_output=$1
     shift
     (
         declare -p $@
-    )>"$f"
+    )>"$_file_output"
 
 }
 
+load_variables_from_file_RET_FILE=
 load_variables_from_file()
 {
     local _file_input=$1
     shift
-    echo "in func amp_v: $amp_v"
-    . <(
+    local $@
+    load_variables_from_file_RET_FILE=$(mktemp --suffix=__asstraiers )
+    (
         . "$_file_input" &>/dev/null
         declare -p $@ 2>/dev/null
-    )
-    echo "in func amp_v: $amp_v"
+    )>$load_variables_from_file_RET_FILE
 }
+#NOTE: to load the result, run the code below
+# $> . $load_variables_from_file_RET_FILE
