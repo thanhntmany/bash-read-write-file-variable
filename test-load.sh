@@ -10,10 +10,7 @@ echo amp_v: $amp_v
 echo ac_v: $ac_v
 echo ade: $ade
 
-echo -- load --
-load_variables_from_file test1.sh aas ss amp_v ade ac_v
-. $load_variables_from_file_RET_FILE
+declare -A out
+load_variables_from_file out test1.sh amp_v ac_v ade zz xx aint
 
-echo amp_v: $amp_v
-echo ac_v: ${ac_v[@]}
-echo ade: $ade
+declare -p out
