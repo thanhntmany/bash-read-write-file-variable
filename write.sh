@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./function.sh
+. ./ass-main.sh
 
 amp_v="asimple variable"
 ac_v=("a" "complex" "variable")

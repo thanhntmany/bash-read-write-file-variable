@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./function.sh
+. ./ass-main.sh
 
 amp_v='ampv truc khi load'
 ac_v='ampv truc khi load'
