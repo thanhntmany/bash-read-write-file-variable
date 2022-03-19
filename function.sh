@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Author: Thanhntmany
+#
+# Write and load bash variable to/from file
+# Write:
+#   $> write_variables_to_file FILEPATH var1 var2 var3 ...
+# Load:
+#   $> load_variables_from_file FILEPATH var1 var3
+#   $> . $load_variables_from_file_RET_FILE
+#
+# After run load_variables_from_file, delacrations of listed variables will be
+# stored in load_variables_from_file_RET_FILE.
+# Then you can use the second command to load the listed variables into
+# the current variable environment.
+
 write_variables_to_file()
 {
     local _file_output=$1
