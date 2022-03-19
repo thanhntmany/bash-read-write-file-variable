@@ -13,6 +13,9 @@
 # stored in load_variables_from_file_RET_FILE.
 # Then you can use the second command to load the listed variables into
 # the current variable environment.
+# NOTE: load_variables_from_file_RET_FILE is a file stored in tmp folder,
+# it's removed automatically by OS. However, in som case, you must remove
+# it by yourself
 
 write_variables_to_file()
 {
